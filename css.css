@@ -1,0 +1,139 @@
+/* Basic page setup */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f1eb;
+    color: #222;
+    text-align: center;
+}
+
+
+/* Main carousel area */
+.carousel {
+    width: 88%;
+    max-width: 950px;
+    margin: 25px auto 40px auto;
+}
+
+
+/* Main title */
+h1 {
+    font-size: 38px;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+
+/* Introduction */
+.intro {
+    color: #666;
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+
+
+/* Sequence buttons */
+.sequence-controls {
+    margin-bottom: 18px;
+}
+
+
+/* Story title */
+h2 {
+    font-size: 27px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+
+/* Shows the meaning of the current sequence */
+#storyPath {
+    color: #666;
+    font-size: 17px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+
+/* Image container */
+.image-container {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    overflow: hidden;
+}
+
+
+/* Main image */
+#storyImage {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* Story information */
+.story-info {
+    margin-top: 14px;
+}
+
+
+/* Beginning, Middle, End */
+#stage {
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 0;
+    margin-bottom: 6px;
+}
+
+
+/* Story caption */
+#caption {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+
+/* Beginning, Middle, End buttons */
+.controls {
+    margin-top: 8px;
+}
+
+
+/* All buttons */
+button {
+    padding: 11px 20px;
+    margin: 4px;
+    border: none;
+    background-color: #222;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+
+/* Button hover */
+button:hover {
+    background-color: #555;
+}
+
+
+/* Sequence buttons */
+.sequence-controls button {
+    padding: 12px 25px;
+}
+
+
+/* First sequence starts active */
+#storyOneButton {
+    background-color: #315f73;
+}
+
+
+/* Second sequence starts inactive */
+#storyTwoButton {
+    background-color: #777;
+}

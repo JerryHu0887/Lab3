@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Power of Sequencing</title>
+
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" href="css.css">
+</head>
+
+<body>
+
+    <main class="carousel">
+
+        <!-- Main title -->
+        <h1>The Power of Sequencing</h1>
+
+        <!-- Introduction -->
+        <p class="intro">
+            The same three moments can tell a different story when their order changes.
+        </p>
+
+        <!-- Choose between the two sequences -->
+        <div class="sequence-controls">
+            <button id="storyOneButton">
+                Sequence 1: Growing Together
+            </button>
+
+            <button id="storyTwoButton">
+                Sequence 2: Falling Apart
+            </button>
+        </div>
+
+        <!-- Story title -->
+        <h2 id="storyTitle">
+            Growing Together
+        </h2>
+
+        <!-- Shows the order and meaning of the sequence -->
+        <p id="storyPath">
+            Conflict → Reconciliation → New Beginning
+        </p>
+
+        <!-- Main carousel image -->
+        <div class="image-container">
+
+            <img id="storyImage"
+                 src="images/image3.png"
+                 alt="A couple having a disagreement">
+
+        </div>
+
+        <!-- Current part of the story -->
+        <div class="story-info">
+
+            <h3 id="stage">
+                Beginning
+            </h3>
+
+            <p id="caption">
+                After an argument, distance grows between them.
+            </p>
+
+        </div>
+
+        <!-- Move through Beginning, Middle, and End -->
+        <div class="controls">
+
+            <button id="beginningButton">
+                Beginning
+            </button>
+
+            <button id="middleButton">
+                Middle
+            </button>
+
+            <button id="endButton">
+                End
+            </button>
+
+        </div>
+
+    </main>
+
+    <!-- Link to JavaScript file -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
