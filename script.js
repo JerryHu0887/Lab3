@@ -16,7 +16,11 @@ let middleText = "They choose to reconnect and repair their relationship.";
 let endText = "Their relationship moves forward into a new chapter.";
 
 
-// Get page elements
+// Store the current theme color
+let themeColor = "#315f73";
+
+
+// Get the main page elements
 let storyImage = document.getElementById("storyImage");
 let storyTitle = document.getElementById("storyTitle");
 let storyPath = document.getElementById("storyPath");
@@ -24,12 +28,18 @@ let stage = document.getElementById("stage");
 let caption = document.getElementById("caption");
 
 
-// Get sequence buttons
+// Get the sequence buttons
 let storyOneButton = document.getElementById("storyOneButton");
 let storyTwoButton = document.getElementById("storyTwoButton");
 
 
-// Show the beginning of the current sequence
+// Get the story stage buttons
+let beginningButton = document.getElementById("beginningButton");
+let middleButton = document.getElementById("middleButton");
+let endButton = document.getElementById("endButton");
+
+
+// Show the beginning of the current story
 function showBeginning() {
 
     storyImage.src = beginningImage;
@@ -37,10 +47,16 @@ function showBeginning() {
     stage.innerHTML = "Beginning";
 
     caption.innerHTML = beginningText;
+
+
+    // Show Beginning as the active button
+    beginningButton.style.backgroundColor = themeColor;
+    middleButton.style.backgroundColor = "#777";
+    endButton.style.backgroundColor = "#777";
 }
 
 
-// Show the middle of the current sequence
+// Show the middle of the current story
 function showMiddle() {
 
     storyImage.src = middleImage;
@@ -48,10 +64,16 @@ function showMiddle() {
     stage.innerHTML = "Middle";
 
     caption.innerHTML = middleText;
+
+
+    // Show Middle as the active button
+    beginningButton.style.backgroundColor = "#777";
+    middleButton.style.backgroundColor = themeColor;
+    endButton.style.backgroundColor = "#777";
 }
 
 
-// Show the end of the current sequence
+// Show the end of the current story
 function showEnd() {
 
     storyImage.src = endImage;
@@ -59,10 +81,16 @@ function showEnd() {
     stage.innerHTML = "End";
 
     caption.innerHTML = endText;
+
+
+    // Show End as the active button
+    beginningButton.style.backgroundColor = "#777";
+    middleButton.style.backgroundColor = "#777";
+    endButton.style.backgroundColor = themeColor;
 }
 
 
-// Sequence 1
+// Sequence 1: conflict to a new beginning
 function showStoryOne() {
 
     storyTitle.innerHTML = "Growing Together";
@@ -71,13 +99,19 @@ function showStoryOne() {
         "Conflict → Reconciliation → New Beginning";
 
 
-    // Change the image order
+    // Set Sequence 1 theme color
+    themeColor = "#315f73";
+
+    storyPath.style.color = themeColor;
+
+
+    // Set the image order
     beginningImage = image3;
     middleImage = image2;
     endImage = image1;
 
 
-    // Change the interpretation of the images
+    // Set the meaning of each image
     beginningText =
         "After an argument, distance grows between them.";
 
@@ -88,8 +122,8 @@ function showStoryOne() {
         "Their relationship moves forward into a new chapter.";
 
 
-    // Show which sequence is selected
-    storyOneButton.style.backgroundColor = "#315f73";
+    // Show Sequence 1 as selected
+    storyOneButton.style.backgroundColor = themeColor;
     storyTwoButton.style.backgroundColor = "#777";
 
 
@@ -98,7 +132,7 @@ function showStoryOne() {
 }
 
 
-// Sequence 2
+// Sequence 2: happiness to conflict
 function showStoryTwo() {
 
     storyTitle.innerHTML = "Falling Apart";
@@ -107,13 +141,19 @@ function showStoryTwo() {
         "New Beginning → Happiness → Conflict";
 
 
+    // Set Sequence 2 theme color
+    themeColor = "#a34a4a";
+
+    storyPath.style.color = themeColor;
+
+
     // Reverse the image order
     beginningImage = image1;
     middleImage = image2;
     endImage = image3;
 
 
-    // Give the images a different interpretation
+    // Give the same images a different interpretation
     beginningText =
         "They begin with exciting news and plans for the future.";
 
@@ -124,9 +164,9 @@ function showStoryTwo() {
         "But their happiness eventually gives way to conflict.";
 
 
-    // Show which sequence is selected
+    // Show Sequence 2 as selected
     storyOneButton.style.backgroundColor = "#777";
-    storyTwoButton.style.backgroundColor = "#315f73";
+    storyTwoButton.style.backgroundColor = themeColor;
 
 
     // Return to the beginning
@@ -135,18 +175,24 @@ function showStoryTwo() {
 
 
 // Beginning button
-document.getElementById("beginningButton")
-    .addEventListener("click", showBeginning);
+beginningButton.addEventListener(
+    "click",
+    showBeginning
+);
 
 
 // Middle button
-document.getElementById("middleButton")
-    .addEventListener("click", showMiddle);
+middleButton.addEventListener(
+    "click",
+    showMiddle
+);
 
 
 // End button
-document.getElementById("endButton")
-    .addEventListener("click", showEnd);
+endButton.addEventListener(
+    "click",
+    showEnd
+);
 
 
 // Sequence 1 button
